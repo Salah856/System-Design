@@ -16,4 +16,8 @@ Before starting the design, we first look at the benefits of using an API rate l
 - Prevent servers from being overloaded. To reduce server load, a rate limiter is used to filter out excess requests caused by bots or users’ misbehavior
 
 
+## Step 1 - Understand the problem and establish design scope
+
+Rate limiting can be implemented using different algorithms, each with its pros and cons. The interactions between an interviewer and a candidate help to clarify the type of rate limiters we are trying to build
+
 
