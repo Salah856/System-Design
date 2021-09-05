@@ -106,3 +106,11 @@ Rate limiting can be implemented using different algorithms, and each of them ha
 
 The token bucket algorithm is widely used for rate limiting. It is simple, well understood andcommonly used by internet companies. Both Amazon and Stripe use this algorithm to throttle their API requests.
 
+The token bucket algorithm work as follows:
+
+- A token bucket is a container that has pre-defined capacity. 
+- Tokens are put in the bucket at preset rates periodically. 
+- Once the bucket is full, no more tokens are added. 
+- The refiller puts 2 tokens into the bucket every second. Once the bucket is full, extra tokens will overflow
+
+
