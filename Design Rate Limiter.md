@@ -53,3 +53,14 @@ Here is a summary of the requirements for the system:
   - High fault tolerance. If there are any problems with the rate limiter (for example, a cache server goes offline), it does not affect the entire system.
 
 
+## Step 2 - Propose high-level design and get buy-in
+
+Let us keep things simple and use a basic client and server model for communication.
+
+#### Where to put the rate limiter?
+Intuitively, you can implement a rate limiter at either the client or server-side.
+
+- Client-side implementation. Generally speaking, client is an unreliable place to enforce rate limiting because client requests can easily be forged by malicious actors. Moreover, we might not have control over the client implementation.
+
+- Server-side implementation. Figure 4-1 shows a rate limiter that is placed on the server- side.
+
