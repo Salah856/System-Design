@@ -64,3 +64,14 @@ Intuitively, you can implement a rate limiter at either the client or server-sid
 
 - Server-side implementation. Figure 4-1 shows a rate limiter that is placed on the server- side.
 
+
+![image](https://user-images.githubusercontent.com/23625821/132120378-d579933f-556e-4cd3-8b63-8ef6d63b4d90.png)
+
+Besides the client and server-side implementations, there is an alternative way. Instead of putting a rate limiter at the API servers, we create a rate limiter middleware, which throttles requests to your APIs. 
+
+![image](https://user-images.githubusercontent.com/23625821/132120384-74c77aff-fda1-4cd5-b0ce-c712b840e0aa.png)
+
+Assume our API allows 2 requests per second, and a client sends 3 requests to the server within a second. The first two requests are routed to API servers. However, the rate limiter middleware throttles the third request and returns a HTTP status code 429. The HTTP 429 response status code indicates a user has sent too many requests.
+
+
+
