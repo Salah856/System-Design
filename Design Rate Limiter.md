@@ -21,3 +21,11 @@ Before starting the design, we first look at the benefits of using an API rate l
 Rate limiting can be implemented using different algorithms, each with its pros and cons. The interactions between an interviewer and a candidate help to clarify the type of rate limiters we are trying to build
 
 
+Candidate: What kind of rate limiter are we going to design? Is it a client-side rate limiter or server-side API rate limiter?
+
+Interviewer: Great question. We focus on the server-side API rate limiter.
+
+Candidate: Does the rate limiter throttle API requests based on IP, the user ID, or other properties?
+
+Interviewer: The rate limiter should be flexible enough to support different sets of throttle rules.
+
