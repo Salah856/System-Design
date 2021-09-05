@@ -114,3 +114,13 @@ The token bucket algorithm work as follows:
 - The refiller puts 2 tokens into the bucket every second. Once the bucket is full, extra tokens will overflow
 
 
+![image](https://user-images.githubusercontent.com/23625821/132120475-79508740-9e87-4a86-8305-a3c6a78d7d23.png)
+
+
+
+
+
+
+### Reference 
+
+<a href="https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF"> System Design Interview </a>
