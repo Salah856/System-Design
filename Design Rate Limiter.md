@@ -102,3 +102,7 @@ Rate limiting can be implemented using different algorithms, and each of them ha
     • Sliding window log
     • Sliding window counter
 
+#### Token bucket algorithm
+
+The token bucket algorithm is widely used for rate limiting. It is simple, well understood andcommonly used by internet companies. Both Amazon [5] and Stripe [6] use this algorithm to throttle their API requests.
+
