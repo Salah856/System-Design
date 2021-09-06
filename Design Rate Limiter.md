@@ -181,7 +181,11 @@ In this example, the rate limiter allows 2 requests per minute. Usually, Linux t
 - Two outdated timestamps, 1:00:01 and 1:00:30, are removed from the log. After the remove operation, the log size becomes 2; therefore, the request is accepted.
 
 
+Pros:
+- Rate limiting implemented by this algorithm is very accurate. In any rolling window, requests will not exceed the rate limit.
 
+Cons:
+- The algorithm consumes a lot of memory because even if a request is rejected, its timestamp might still be stored in memory.
 
 
 
