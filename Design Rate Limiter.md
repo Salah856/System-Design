@@ -140,6 +140,14 @@ Cons:
 - A burst of traffic fills up the queue with old requests, and if they are not processed in time, recent requests will be rate limited.
 - There are two parameters in the algorithm. It might not be easy to tune them properly.
 
+#### Fixed window counter algorithm
+
+Fixed window counter algorithm works as follows:
+
+- The algorithm divides the timeline into fix-sized time windows and assign a counter for each window.
+- Each request increments the counter by one.
+- Once the counter reaches the pre-defined threshold, new requests are dropped until a new time window starts.
+
 
 
 
