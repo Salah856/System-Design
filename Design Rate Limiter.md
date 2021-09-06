@@ -191,6 +191,8 @@ Cons:
 
 The sliding window counter algorithm is a hybrid approach that combines the fixed window counter and sliding window log. The algorithm can be implemented by two different approaches. We will explain one implementation in this section and provide reference for the other implementation at the end of the section.
 
+![image](https://user-images.githubusercontent.com/23625821/132175266-5fd0470d-e71a-441a-a058-81d0dd942b49.png)
+
 
 
 
