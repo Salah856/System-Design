@@ -161,6 +161,8 @@ Pros:
 Cons:
 - Spike in traffic at the edges of a window could cause more requests than the allowed quota to go through.
 
+#### Sliding window log algorithm
+
 
 
 ### Reference 
