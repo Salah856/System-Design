@@ -148,6 +148,9 @@ Fixed window counter algorithm works as follows:
 - Each request increments the counter by one.
 - Once the counter reaches the pre-defined threshold, new requests are dropped until a new time window starts.
 
+![image](https://user-images.githubusercontent.com/23625821/132173976-d45e74e0-b632-4508-a6e5-360126d7520b.png)
+
+
 
 
 
