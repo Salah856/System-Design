@@ -193,6 +193,9 @@ The sliding window counter algorithm is a hybrid approach that combines the fixe
 
 ![image](https://user-images.githubusercontent.com/23625821/132175266-5fd0470d-e71a-441a-a058-81d0dd942b49.png)
 
+Assume the rate limiter allows a maximum of 7 requests per minute, and there are 5 requests in the previous minute and 3 in the current minute. For a new request that arrives at a 30% position in the current minute, the number of requests in the rolling window is calculated using the following formula:
+
+- Requests in current window + requests in the previous window * overlap percentage of the rolling window and previous window
 
 
 
