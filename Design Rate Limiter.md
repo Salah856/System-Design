@@ -115,7 +115,14 @@ The token bucket algorithm work as follows:
 
 ![image](https://user-images.githubusercontent.com/23625821/132120508-e55a0136-e72c-448c-a84f-bff662be24d7.png)
 
+#### Leaking bucket algorithm
+The leaking bucket algorithm is similar to the token bucket except that requests are processed at a fixed rate. It is usually implemented with a first-in-first-out (FIFO) queue. The algorithm works as follows:
 
+  - When a request arrives, the system checks if the queue is full. If it is not full, the request is added to the queue.
+  - Otherwise, the request is dropped.
+  - Requests are pulled from the queue and processed at regular intervals.
+
+![image](https://user-images.githubusercontent.com/23625821/132173606-16b92216-374c-4b89-9356-e807dae1618e.png)
 
 
 
