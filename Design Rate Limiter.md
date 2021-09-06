@@ -170,8 +170,7 @@ The fixed window counter algorithm has a major issue: it allows more requests to
 - Add timestamp of the new request to the log.
 - If the log size is the same or lower than the allowed count, a request is accepted. Otherwise, it is rejected.
 
-
-
+![image](https://user-images.githubusercontent.com/23625821/132174782-401a4eeb-321b-40e1-94ce-1a6e7d4989a7.png)
 
 
 
