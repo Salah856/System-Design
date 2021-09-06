@@ -211,6 +211,13 @@ Cons
 - According to experiments done by Cloudflare, only 0.003% of requests are wrongly allowed or rate limited among 400 million requests.
 
 
+### High-level architecture
+
+The basic idea of rate limiting algorithms is simple. At the high-level, we need a counter to keep track of how many requests are sent from the same user, IP address, etc. If the counter is larger than the limit, the request is disallowed. Where shall we store counters? Using the database is not a good idea due to slowness of disk access. In-memory cache is chosen because it is fast and supports time-based expiration strategy. For instance, Redis is a popular option to implement rate limiting. It is an in- memory store that offers two commands: INCR and EXPIRE.
+
+- INCR: It increases the stored counter by 1.
+- EXPIRE: It sets a timeout for the counter. If the timeout expires, the counter is automatically deleted.
+
 
 
 
