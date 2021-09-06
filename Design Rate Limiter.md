@@ -132,6 +132,13 @@ Leaking bucket algorithm takes the following two parameters:
 
 Shopify, an ecommerce company, uses leaky buckets for rate-limiting
 
+Pros:
+- Memory efficient given the limited queue size.
+- Requests are processed at a fixed rate therefore it is suitable for use cases that a stable outflow rate is needed.
+
+Cons:
+- A burst of traffic fills up the queue with old requests, and if they are not processed in time, recent requests will be rate limited.
+- There are two parameters in the algorithm. It might not be easy to tune them properly.
 
 
 
