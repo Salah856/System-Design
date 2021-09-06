@@ -187,7 +187,9 @@ Pros:
 Cons:
 - The algorithm consumes a lot of memory because even if a request is rejected, its timestamp might still be stored in memory.
 
+#### Sliding window counter algorithm
 
+The sliding window counter algorithm is a hybrid approach that combines the fixed window counter and sliding window log. The algorithm can be implemented by two different approaches. We will explain one implementation in this section and provide reference for the other implementation at the end of the section.
 
 
 
