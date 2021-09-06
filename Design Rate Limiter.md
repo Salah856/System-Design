@@ -150,7 +150,16 @@ Fixed window counter algorithm works as follows:
 
 ![image](https://user-images.githubusercontent.com/23625821/132173976-d45e74e0-b632-4508-a6e5-360126d7520b.png)
 
+A major problem with this algorithm is that a burst of traffic at the edges of time windows could cause more requests than allowed quota to go through.
 
+
+Pros:
+- Memory efficient.
+- Easy to understand.
+- Resetting available quota at the end of a unit time window fits certain use cases.
+
+Cons:
+- Spike in traffic at the edges of a window could cause more requests than the allowed quota to go through.
 
 
 
