@@ -172,8 +172,13 @@ The fixed window counter algorithm has a major issue: it allows more requests to
 
 ![image](https://user-images.githubusercontent.com/23625821/132174782-401a4eeb-321b-40e1-94ce-1a6e7d4989a7.png)
 
+In this example, the rate limiter allows 2 requests per minute. Usually, Linux timestamps are stored in the log. However, human-readable representation of time is used in our example for better readability.
 
+- The log is empty when a new request arrives at 1:00:01. Thus, the request is allowed.• A new request arrives at 1:00:30, the timestamp 1:00:30 is inserted into the log. After the insertion, the log size is 2, not larger than the allowed count. Thus, the request is allowed.
 
+- A new request arrives at 1:00:50, and the timestamp is inserted into the log. After the insertion, the log size is 3, larger than the allowed size 2. Therefore, this request is rejected even though the timestamp remains in the log.
+- A new request arrives at 1:01:40. Requests in the range [1:00:40,1:01:40) are within the latest time frame, but requests sent before 1:00:40 are outdated. 
+- Two outdated timestamps, 1:00:01 and 1:00:30, are removed from the log. After the remove operation, the log size becomes 2; therefore, the request is accepted.
 
 
 
