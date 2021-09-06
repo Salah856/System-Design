@@ -218,6 +218,12 @@ The basic idea of rate limiting algorithms is simple. At the high-level, we need
 - INCR: It increases the stored counter by 1.
 - EXPIRE: It sets a timeout for the counter. If the timeout expires, the counter is automatically deleted.
 
+![image](https://user-images.githubusercontent.com/23625821/132176124-60d39b6a-3532-452e-81f3-cd08d9d9587a.png)
+
+- The client sends a request to rate limiting middleware.
+- Rate limiting middleware fetches the counter from the corresponding bucket in Redis andchecks if the limit is reached or not.
+    - If the limit is reached, the request is rejected.
+    - If the limit is not reached, the request is sent to API servers. Meanwhile, the system increments the counter and saves it back to Redis.
 
 
 
