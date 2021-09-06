@@ -202,6 +202,13 @@ Assume the rate limiter allows a maximum of 7 requests per minute, and there are
 Since the rate limiter allows a maximum of 7 requests per minute, the current request can go through. However, the limit will be reached after receiving one more request.
 
 
+Pros
+- It smooths out spikes in traffic because the rate is based on the average rate of the previous window.
+- Memory efficient.
+
+Cons
+- It only works for not-so-strict look back window. It is an approximation of the actual rate because it assumes requests in the previous window are evenly distributed. However, this problem may not be as bad as it seems. 
+- According to experiments done by Cloudflare, only 0.003% of requests are wrongly allowed or rate limited among 400 million requests.
 
 
 
