@@ -163,6 +163,25 @@ Cons:
 
 #### Sliding window log algorithm
 
+The fixed window counter algorithm has a major issue: it allows more requests to go through at the edges of a window. The sliding window log algorithm fixes the issue. It works as follows:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Reference 
