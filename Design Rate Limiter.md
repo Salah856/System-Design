@@ -263,6 +263,12 @@ descriptors:
 
 ```
 
+#### Exceeding the rate limit
+
+In case a request is rate limited, APIs return a HTTP response code 429 (too many requests) to the client. Depending on the use cases, we may enqueue the rate-limited requests to be processed later. For example, if some orders are rate limited due to system overload, we may keep those orders to be processed later.
+
+
+
 
 
 
