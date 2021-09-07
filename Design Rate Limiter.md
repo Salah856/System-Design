@@ -280,6 +280,14 @@ How does a client know whether it is being throttled? And how does a client know
 When a user has sent too many requests, a 429 too many requests error and X-Ratelimit-Retry-After header are returned to the client.
 
 
+![image](https://user-images.githubusercontent.com/23625821/132287806-04de0d48-0056-485e-b809-0e06ddec791d.png)
+
+- Rules are stored on the disk. Workers frequently pull rules from the disk and store them in the cache.
+- When a client sends a request to the server, the request is sent to the rate limiter middleware first.
+- Rate limiter middleware loads rules from the cache. It fetches counters and last request timestamp from Redis cache. Based on the response, the rate limiter decides:
+
+      - if the request is not rate limited, it is forwarded to API servers.
+      - if the request is rate limited, the rate limiter returns 429 too many requests error to the client. In the meantime, the request is either dropped or forwarded to the queue.
 
 
 
