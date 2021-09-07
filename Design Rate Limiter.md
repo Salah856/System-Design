@@ -243,10 +243,10 @@ Lyft open-sourced their rate-limiting component. We will peek inside of the comp
 domain: messaging
 descriptors:
 - key: message_type
-Value: marketing
-rate_limit:
-unit: day
-requests_per_unit: 5
+  Value: marketing
+  rate_limit:
+    unit: day
+    requests_per_unit: 5
 
 ```
 
