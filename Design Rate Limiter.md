@@ -226,6 +226,46 @@ The basic idea of rate limiting algorithms is simple. At the high-level, we need
     - If the limit is not reached, the request is sent to API servers. Meanwhile, the system increments the counter and saves it back to Redis.
 
 
+### Step 3 - Design deep dive
+
+The high-level design does not answer the following questions:
+
+- How are rate limiting rules created? Where are the rules stored?
+- How to handle requests that are rate limited?
+
+In this section, we will first answer the questions regarding rate limiting rules and then go over the strategies to handle rate-limited requests. Finally, we will discuss rate limiting in distributed environment, a detailed design, performance optimization and monitoring.
+
+#### Rate limiting rules
+
+Lyft open-sourced their rate-limiting component. We will peek inside of the component and look at some examples of rate limiting rules:
+
+```yaml
+domain: messaging
+descriptors:
+- key: message_type
+Value: marketing
+rate_limit:
+unit: day
+requests_per_unit: 5
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
