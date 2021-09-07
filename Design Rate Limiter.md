@@ -250,7 +250,18 @@ descriptors:
 
 ```
 
+In the above example, the system is configured to allow a maximum of 5 marketing messages per day. Here is another example:
 
+```yaml
+domain: auth
+descriptors:
+- key: auth_type
+  Value: login
+  rate_limit:
+    unit: minute
+    requests_per_unit: 5
+
+```
 
 
 
