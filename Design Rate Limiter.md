@@ -288,7 +288,8 @@ When a user has sent too many requests, a 429 too many requests error and X-Rate
 
 - Based on the response, the rate limiter decides:
     - if the request is not rate limited, it is forwarded to API servers.
-    - if the request is rate limited, the rate limiter returns 429 too many requests error to the client. In the meantime, the request is either dropped or forwarded to the queue.
+    - if the request is rate limited, the rate limiter returns 429 too many requests error to the client. 
+    - In the meantime, the request is either dropped or forwarded to the queue.
 
 
 
