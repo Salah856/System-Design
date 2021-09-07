@@ -277,8 +277,7 @@ How does a client know whether it is being throttled? And how does a client know
     X-Ratelimit-Retry-After: The number of seconds to wait until you can make a request again without being throttled.
 
 
-
-
+When a user has sent too many requests, a 429 too many requests error and X-Ratelimit-Retry-After header are returned to the client.
 
 
 
