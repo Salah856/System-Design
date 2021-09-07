@@ -268,7 +268,13 @@ descriptors:
 In case a request is rate limited, APIs return a HTTP response code 429 (too many requests) to the client. Depending on the use cases, we may enqueue the rate-limited requests to be processed later. For example, if some orders are rate limited due to system overload, we may keep those orders to be processed later.
 
 
+How does a client know whether it is being throttled? And how does a client know the number of allowed remaining requests before being throttled? The answer lies in HTTP response headers. The rate limiter returns the following HTTP headers to clients:
 
+X-Ratelimit-Remaining: The remaining number of allowed requests within the window.
+
+X-Ratelimit-Limit: It indicates how many calls the client can make per time window.
+
+X-Ratelimit-Retry-After: The number of seconds to wait until you can make a request again without being throttled.
 
 
 
