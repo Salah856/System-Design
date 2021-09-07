@@ -1,5 +1,5 @@
 
-# How to design rate limiter 
+# How to design a rate limiter 
 
 In a network system, a rate limiter is used to control the rate of traffic sent by a client or a service. In the HTTP world, a rate limiter limits the number of client requests allowed to be sent over a specified period. If the API request count exceeds the threshold defined by the rate limiter, all the excess calls are blocked. Here are a few examples:
 
