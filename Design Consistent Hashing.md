@@ -39,3 +39,11 @@ Now we understand the definition of consistent hashing, let us find out how it w
 That means x0 corresponds to 0, xn corresponds to 2^160 – 1, and all the other hash values in the middle fall between 0 and 2^160 - 1.
 
 
+![image](https://user-images.githubusercontent.com/23625821/132458366-48f5b2fd-e448-4f7d-a20d-95bf6c2bca46.png)
+
+
+By collecting both ends, we get a hash ring like following: 
+
+![image](https://user-images.githubusercontent.com/23625821/132458458-8066f343-380c-49ff-8cd1-3292d0881fd6.png)
+
+
