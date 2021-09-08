@@ -21,5 +21,6 @@ This approach works well when the size of the server pool is fixed, and the data
 For example, if server 1 goes offline, the size of the server pool becomes 3. Using the same hash function, we get the same hash value for a key. But applying modular operation gives us different server indexes because the number of servers is reduced by 1. 
 
 
+![1](https://user-images.githubusercontent.com/23625821/132457499-dc2de4fb-370e-4a84-bbcb-c72e400c9ebb.png)
 
 
