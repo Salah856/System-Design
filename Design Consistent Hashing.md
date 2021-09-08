@@ -13,7 +13,7 @@ If you have n cache servers, a common way to balance the load is to use the foll
 
 To fetch the server where a key is stored, we perform the modular operation f(key) % 4. For instance, hash(key0) % 4 = 1 means a client must contact server 1 to fetch the cached data.
 
-
+![image](https://user-images.githubusercontent.com/23625821/132457322-82e9bbe2-aec3-4644-a22c-90bed3edd97d.png)
 
 
 
