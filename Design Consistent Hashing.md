@@ -9,3 +9,6 @@ If you have n cache servers, a common way to balance the load is to use the foll
     serverIndex = hash(key) % N, where N is the size of the server pool.
 
 
+![1](https://user-images.githubusercontent.com/23625821/132457051-a0466301-bd1e-4579-a38a-19ae82874049.png)
+
+
