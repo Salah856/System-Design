@@ -16,5 +16,10 @@ To fetch the server where a key is stored, we perform the modular operation f(ke
 ![image](https://user-images.githubusercontent.com/23625821/132457322-82e9bbe2-aec3-4644-a22c-90bed3edd97d.png)
 
 
+This approach works well when the size of the server pool is fixed, and the data distribution is even. However, problems arise when new servers are added, or existing servers are removed. 
+
+For example, if server 1 goes offline, the size of the server pool becomes 3. Using the same hash function, we get the same hash value for a key. But applying modular operation gives us different server indexes because the number of servers is reduced by 1. 
+
+
 
 
