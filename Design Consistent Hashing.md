@@ -46,4 +46,7 @@ By collecting both ends, we get a hash ring like following:
 
 ![image](https://user-images.githubusercontent.com/23625821/132458458-8066f343-380c-49ff-8cd1-3292d0881fd6.png)
 
+### Hash servers
+Using the same hash function f, we map servers based on server IP or name onto the ring.
+
 
