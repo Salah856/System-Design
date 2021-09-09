@@ -92,3 +92,8 @@ For example, if s1 is removed, s2’s partition (highlighted with the bidirectio
 
 ![image](https://user-images.githubusercontent.com/23625821/132645996-9ba4b3fe-519f-457c-b3d3-2e7ee845d4f3.png)
 
+### Virtual nodes
+
+A virtual node refers to the real node, and each server is represented by multiple virtual nodes on the ring.
+
+
