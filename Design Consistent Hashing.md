@@ -87,3 +87,8 @@ When a server is removed, only a small fraction of keys require redistribution w
 - A partition is the hash space between adjacent servers. 
 - It is possible that the size of the partitions on the ring assigned to each server is very small or fairly large.
 
+
+For example, if s1 is removed, s2’s partition (highlighted with the bidirectional arrows) is twice as large as s0 and s3’s partition.
+
+![image](https://user-images.githubusercontent.com/23625821/132645996-9ba4b3fe-519f-457c-b3d3-2e7ee845d4f3.png)
+
