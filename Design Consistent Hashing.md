@@ -67,5 +67,7 @@ To determine which server a key is stored on, we go clockwise from the key posit
 
 Using the logic described above, adding a new server will only require redistribution of a fraction of keys. Let us take a close look at the logic. Before server 4 is added, key0 is stored on server 0. Now, key0 will be stored on server 4 because server 4 is the first server it encounters by going clockwise from key0’s position on the ring. The other keys are not redistributed based on consistent hashing algorithm.
 
+![image](https://user-images.githubusercontent.com/23625821/132645081-005c1d41-683c-46e1-bd33-d61d60176356.png)
+
 
 
