@@ -60,5 +60,9 @@ One thing worth mentioning is that hash function used here is different from the
 
 ### Server lookup
 
+To determine which server a key is stored on, we go clockwise from the key position on the ring until a server is found.
+
+![image](https://user-images.githubusercontent.com/23625821/132644801-0591abbf-02e5-4cf3-9349-776d9800f97d.png)
+
 
 
