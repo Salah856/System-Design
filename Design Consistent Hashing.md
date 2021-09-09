@@ -69,5 +69,10 @@ Using the logic described above, adding a new server will only require redistrib
 
 ![image](https://user-images.githubusercontent.com/23625821/132645081-005c1d41-683c-46e1-bd33-d61d60176356.png)
 
+### Remove a server
+
+When a server is removed, only a small fraction of keys require redistribution with consistent hashing. When server 1 is removed, only key1 must be remapped to server 2. The rest of the keys are unaffected.
+
+
 
 
