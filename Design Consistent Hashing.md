@@ -76,4 +76,9 @@ When a server is removed, only a small fraction of keys require redistribution w
 ![image](https://user-images.githubusercontent.com/23625821/132645323-4ed47092-e099-42bc-a869-dee2251534b7.png)
 
 
+[] The basic steps are:
+
+- Map servers and keys on to the ring using a uniformly distributed hash function.
+- To find out which server a key is mapped to, go clockwise from the key position until the first server on the ring is found.
+
 
