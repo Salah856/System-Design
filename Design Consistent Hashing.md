@@ -81,4 +81,9 @@ When a server is removed, only a small fraction of keys require redistribution w
 - Map servers and keys on to the ring using a uniformly distributed hash function.
 - To find out which server a key is mapped to, go clockwise from the key position until the first server on the ring is found.
 
+###### Two problems are identified with this approach. 
+
+- First, it is impossible to keep the same size of partitions on the ring for all servers considering a server can be added or removed. 
+- A partition is the hash space between adjacent servers. 
+- It is possible that the size of the partitions on the ring assigned to each server is very small or fairly large.
 
