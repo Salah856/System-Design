@@ -54,9 +54,7 @@ Using the same hash function f, we map servers based on server IP or name onto t
 
 ### Hash keys
 
-One thing worth mentioning is that hash function used here is different from the one in “the rehashing problem,” and there is no modular operation. 
-
-As shown, 4 cache keys (key0, key1, key2, and key3) are hashed onto the hash ring: 
+One thing worth mentioning is that hash function used here is different from the one in “the rehashing problem,” and there is no modular operation. As shown, 4 cache keys (key0, key1, key2, and key3) are hashed onto the hash ring: 
 
 ![image](https://user-images.githubusercontent.com/23625821/132644590-dc63e626-e02b-4442-b91b-a38b97275a15.png)
 
