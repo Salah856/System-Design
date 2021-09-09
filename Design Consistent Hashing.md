@@ -94,7 +94,7 @@ For example, if s1 is removed, s2’s partition (highlighted with the bidirectio
 
 ### Virtual nodes
 
-A virtual node refers to the real node, and each server is represented by multiple virtual nodes on the ring. In the following figure, both server 0 and server 1 have 3 virtual nodes. The 3 isarbitrarily chosen; and in real-world systems, the number of virtual nodes is much larger. 
+A virtual node refers to the real node, and each server is represented by multiple virtual nodes on the ring. In the following figure, both server 0 and server 1 have 3 virtual nodes. The 3 is arbitrarily chosen; and in real-world systems, the number of virtual nodes is much larger. 
 
 
 
