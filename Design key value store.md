@@ -39,3 +39,15 @@ These N servers are chosen using the following logic: after a key is mapped to a
 ![image](https://user-images.githubusercontent.com/23625821/132938370-c850fedd-4830-4676-91ac-ca1401de9e8d.png)
 
 In previous figure, key0 is replicated at s1, s2, and s3.
+
+### Consistency
+
+Since data is replicated at multiple nodes, it must be synchronized across replicas. Quorum consensus can guarantee consistency for both read and write operations. Let us establish a few definitions first.
+
+N = The number of replicas. 
+
+W = A write quorum of size W. For a write operation to be considered as successful, write operation must be acknowledged from W replicas.
+
+R = A read quorum of size R. For a read operation to be considered as successful, read operation must wait for responses from at least R replicas.
+
+
