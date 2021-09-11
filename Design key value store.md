@@ -76,3 +76,8 @@ Consistency model is other important factor to consider when designing a key-val
 - Weak consistency: subsequent read operations may not see the most updated value.
 - Eventual consistency: this is a specific form of weak consistency. Given enough time, all updates are propagated, and all replicas are consistent.
 
+
+Strong consistency is usually achieved by forcing a replica not to accept new reads/writes until every replica has agreed on current write. This approach is not ideal for highly available systems because it could block new operations. Dynamo and Cassandra adopt eventual consistency, which is our recommended consistency model for our key-value store.
+
+
+
