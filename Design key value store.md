@@ -50,4 +50,10 @@ W = A write quorum of size W. For a write operation to be considered as successf
 
 R = A read quorum of size R. For a read operation to be considered as successful, read operation must wait for responses from at least R replicas.
 
+![image](https://user-images.githubusercontent.com/23625821/132938428-0a0c0f34-414a-4a2a-983b-3f4b4cb1c8fe.png)
+
+The configuration of W, R and N is a typical tradeoff between latency and consistency. If W = 1 or R = 1, an operation is returned quickly because a coordinator only needs to wait for a response from any of the replicas. If W or R > 1, the system offers better consistency; however, the query will be slower because the coordinator must wait for the response from the slowest replica.
+
+
+
 
