@@ -36,3 +36,6 @@ To achieve high availability and reliability, data must be replicated asynchrono
 
 These N servers are chosen using the following logic: after a key is mapped to a position on the hash ring, walk clockwise from that position and choose the first N servers on the ring to store data copies.
 
+![image](https://user-images.githubusercontent.com/23625821/132938370-c850fedd-4830-4676-91ac-ca1401de9e8d.png)
+
+In previous figure, key0 is replicated at s1, s2, and s3.
