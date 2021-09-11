@@ -65,3 +65,7 @@ If W = 1 and R = N, the system is optimized for fast write.
 If W + R > N, strong consistency is guaranteed (Usually N = 3, W = R = 2).
 If W + R <= N, strong consistency is not guaranteed.
 
+Depending on the requirement, we can tune the values of W, R, N to achieve the desired level of consistency.
+
+
+
