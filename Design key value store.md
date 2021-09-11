@@ -55,5 +55,13 @@ R = A read quorum of size R. For a read operation to be considered as successful
 The configuration of W, R and N is a typical tradeoff between latency and consistency. If W = 1 or R = 1, an operation is returned quickly because a coordinator only needs to wait for a response from any of the replicas. If W or R > 1, the system offers better consistency; however, the query will be slower because the coordinator must wait for the response from the slowest replica.
 
 
+If W + R > N, strong consistency is guaranteed because there must be at least oneoverlapping node that has the latest data to ensure consistency.
 
+How to configure N, W, and R to fit our use cases? Here are some of the possible setups:
+
+If R = 1 and W = N, the system is optimized for a fast read.
+If W = 1 and R = N, the system is optimized for fast write.
+
+If W + R > N, strong consistency is guaranteed (Usually N = 3, W = R = 2).
+If W + R <= N, strong consistency is not guaranteed.
 
