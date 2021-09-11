@@ -30,3 +30,9 @@ Using consistent hashing to partition data has the following advantages:
 - For example, servers with higher capacity are assigned with more virtual nodes.
 
 
+### Data replication
+
+To achieve high availability and reliability, data must be replicated asynchronously over N servers, where N is a configurable parameter. 
+
+These N servers are chosen using the following logic: after a key is mapped to a position on the hash ring, walk clockwise from that position and choose the first N servers on the ring to store data copies.
+
