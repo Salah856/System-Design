@@ -137,9 +137,26 @@ Hinted handoff is used to handle temporary failures. What if a replica is perman
 
 A hash tree or Merkle tree is a tree in which every non-leaf node is labeled with the hash of the labels or values (in case of leaves) of its child nodes. Hash trees allow efficient and secure verification of the contents of large data structures
 
+Step 1: Divide key space into buckets (4 in our example). A bucket is used as the root level node to maintain a limited depth of the tree.
 
+![image](https://user-images.githubusercontent.com/23625821/132976937-09153501-7c32-4cb4-af23-4f13d65ed86f.png)
 
+Step 2: Once the buckets are created, hash each key in a bucket using a uniform hashing method
 
+![image](https://user-images.githubusercontent.com/23625821/132976949-c3a12897-0de4-4e21-998f-aa60b3712f1a.png)
 
+Step 3: Create a single hash node per bucket
+
+![image](https://user-images.githubusercontent.com/23625821/132976954-7e546860-49db-4a1f-a77c-0355f0a876bd.png)
+
+Step 4: Build the tree upwards till root by calculating hashes of children. 
+
+![image](https://user-images.githubusercontent.com/23625821/132976963-fbc4b019-c9c4-456a-b82b-50b67f1155a6.png)
+
+To compare two Merkle trees, start by comparing the root hashes. If root hashes match, both servers have the same data. If root hashes disagree, then the left child hashes are compared followed by right child hashes. 
+
+You can traverse the tree to find which buckets are not synchronized and synchronize those buckets only. Using Merkle trees, the amount of data needed to be synchronized is proportional to the differences between the two replicas , and not the amount of data they contain. 
+
+In real-world systems, the bucket size is quite big. For instance, a possible configuration is one million buckets per one billion keys, so each bucket only contains 1000 keys.
 
 
