@@ -104,4 +104,9 @@ If data item D is written to server Si, the system must perform one of the follo
 - Increment vi if [Si, vi] exists.
 - Otherwise, create a new entry [Si, 1].
 
+Even though vector clocks can resolve conflicts, there are two notable downsides. First, vector clocks add complexity to the client because it needs to implement conflict resolution logic.
+
+Second, the [server: version] pairs in the vector clock could grow rapidly. To fix this problem, we set a threshold for the length, and if it exceeds the limit, the oldest pairs are removed. This can lead to inefficiencies in reconciliation because the descendant relationship cannot be determined accurately. 
+
+However, based on Dynamo paper, Amazon has not yet encountered this problem in production; therefore, it is probably an acceptable solution for most companies.
 
