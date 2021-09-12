@@ -110,3 +110,30 @@ Second, the [server: version] pairs in the vector clock could grow rapidly. To f
 
 However, based on Dynamo paper, Amazon has not yet encountered this problem in production; therefore, it is probably an acceptable solution for most companies.
 
+
+## Gossip protocol works as follows:
+- Each node maintains a node membership list, which contains member IDs and heartbeat counters.
+- Each node periodically increments its heartbeat counter.
+- Each node periodically sends heartbeats to a set of random nodes, which in turn propagate to another set of nodes.
+- Once nodes receive heartbeats, membership list is updated to the latest info.
+- If the heartbeat has not increased for more than predefined periods, the member is considered as offline.
+
+
+![image](https://user-images.githubusercontent.com/23625821/132976753-a62831a7-f758-418e-af36-93316085a410.png)
+
+### Handling temporary failures
+
+After failures have been detected through the gossip protocol, the system needs to deploy certain mechanisms to ensure availability. In the strict quorum approach, read and write operations could be blocked as illustrated in the quorum consensus section.
+
+A technique called “sloppy quorum” is used to improve availability. Instead of enforcing the quorum requirement, the system chooses the first W healthy servers for writes and first R healthy servers for reads on the hash ring. Offline servers are ignored.
+
+If a server is unavailable due to network or server failures, another server will process requests temporarily. When the down server is up, changes will be pushed back to achieve data consistency. This process is called hinted handoff. Since s2 is unavailable, reads and writes will be handled by s3 temporarily. When s2 comes back online, s3 will hand the data back to s2.
+
+![image](https://user-images.githubusercontent.com/23625821/132976820-8ec8fdfb-e349-4564-b2e8-da4ba7a43983.png)
+
+### Handling permanent failures
+
+
+
+
+
