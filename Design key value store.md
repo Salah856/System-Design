@@ -83,5 +83,19 @@ Strong consistency is usually achieved by forcing a replica not to accept new re
 Replication gives high availability but causes inconsistencies among replicas. Versioning and vector locks are used to solve inconsistency problems. Versioning means treating each data modification as a new immutable version of data. Before we talk about versioning, let us use an example to explain how inconsistency happens:
 
 
+Both replica nodes n1 and n2 have the same value. Let us call this value the original value. Server 1 and server 2 get the same value for get(“name”) operation.
+
+![image](https://user-images.githubusercontent.com/23625821/132976362-6d3e12b0-caf2-4a8a-a079-7123f1f1d493.png)
+
+Next, server 1 changes the name to “johnSanFrancisco”, and server 2 changes the name to “johnNewYork”. These two changes are performed simultaneously. Now, we have conflicting values, called versions v1 and v2.
+
+![image](https://user-images.githubusercontent.com/23625821/132976406-db04866d-c5f3-4fcb-a52a-30d1a4790513.png)
+
+In this example, the original value could be ignored because the modifications were based on it. However, there is no clear way to resolve the conflict of the last two versions. 
+
+To resolve this issue, we need a versioning system that can detect conflicts and reconcile conflicts. A vector clock is a common technique to solve this problem. Let us examine how vector clocks work.
+
+
+
 
 
