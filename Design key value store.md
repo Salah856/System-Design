@@ -2,7 +2,7 @@
 
 ## System components
 
-In this section, we will discuss the following core components and techniques used to build a key-value store:
+We will discuss the following core components and techniques used to build a key-value store:
 
 - Data partition
 - Data replication
