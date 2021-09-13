@@ -161,8 +161,6 @@ In real-world systems, the bucket size is quite big. For instance, a possible co
 
 
 
-
-
 ## Reference materials
 
 [1] Amazon DynamoDB: https://aws.amazon.com/dynamodb/
@@ -184,5 +182,10 @@ In real-world systems, the bucket size is quite big. For instance, a possible co
 [9] SStable: https://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/
 
 [10] Bloom filter https://en.wikipedia.org/wiki/Bloom_filter
+
+
+https://awsbuilder.hashnode.dev/how-to-build-key-value-store
+
+
 
 
