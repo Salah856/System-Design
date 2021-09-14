@@ -30,6 +30,13 @@ However, this strategy has some major drawbacks:
 - It does not scale well when a server is added or removed.
 
 
+## UUID
+
+A UUID is another easy way to obtain unique IDs. UUID is a 128-bit number used to identify information in computer systems. UUID has a very low probability of getting collusion.
+
+Quoted from Wikipedia, “after generating 1 billion UUIDs every second for approximately 100 years would the probability of creating a single duplicate reach 50%”
+
+
 
 
 
