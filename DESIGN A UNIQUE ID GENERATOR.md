@@ -36,14 +36,21 @@ A UUID is another easy way to obtain unique IDs. UUID is a 128-bit number used t
 
 In this design, each web server contains an ID generator, and a web server is responsible for generating IDs independently.
 
-### Pros:
+#### Pros:
 - Generating UUID is simple. No coordination between servers is needed so there will not be any synchronization issues.
 - The system is easy to scale because each web server is responsible for generating IDs they consume. ID generator can easily scale with web servers.
 
-### Cons:
+#### Cons:
 - IDs are 128 bits long, but our requirement is 64 bits.
 - IDs do not go up with time.
 - IDs could be non-numeric.
+
+
+
+## Ticket Server
+
+Ticket servers are another interesting way to generate unique IDs. Flicker developed ticket servers to generate distributed primary keys. It is worth mentioning how the system works.
+
 
 
 
