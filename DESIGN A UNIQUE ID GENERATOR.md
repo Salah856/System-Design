@@ -22,9 +22,7 @@ Multiple options can be used to generate unique IDs in distributed systems. The 
 
 This approach uses the databases’ auto_increment feature. Instead of increasing the next ID by 1, we increase it by k, where k is the number of database servers in use. Next ID to be generated is equal to the previous ID in the same server plus 2. This solves some scalability issues because IDs can scale with the number of database servers.
 
-
 However, this strategy has some major drawbacks:
-
 - Hard to scale with multiple data centers
 - IDs do not go up with time across multiple servers.
 - It does not scale well when a server is added or removed.
@@ -32,9 +30,21 @@ However, this strategy has some major drawbacks:
 
 ## UUID
 
-A UUID is another easy way to obtain unique IDs. UUID is a 128-bit number used to identify information in computer systems. UUID has a very low probability of getting collusion.
+A UUID is another easy way to obtain unique IDs. UUID is a 128-bit number used to identify information in computer systems. UUID has a very low probability of getting collusion. Quoted from Wikipedia, “after generating 1 billion UUIDs every second for approximately 100 years would the probability of creating a single duplicate reach 50%”
 
-Quoted from Wikipedia, “after generating 1 billion UUIDs every second for approximately 100 years would the probability of creating a single duplicate reach 50%”
+![image](https://user-images.githubusercontent.com/23625821/133216432-7145f6bd-3cdf-4e44-b014-73a7d0ac5f09.png)
+
+In this design, each web server contains an ID generator, and a web server is responsible for generating IDs independently.
+
+### Pros:
+- Generating UUID is simple. No coordination between servers is needed so there will not be any synchronization issues.
+- The system is easy to scale because each web server is responsible for generating IDs they consume. ID generator can easily scale with web servers.
+
+### Cons:
+- IDs are 128 bits long, but our requirement is 64 bits.
+- IDs do not go up with time.
+- IDs could be non-numeric.
+
 
 
 
