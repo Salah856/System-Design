@@ -21,6 +21,7 @@ The options we considered are:
 
 ## Multi-master replication
 
+![image](https://user-images.githubusercontent.com/23625821/133215703-d8fb4ea3-83f7-46f0-964b-25fc6c65c7b8.png)
 
 
 
