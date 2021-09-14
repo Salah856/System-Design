@@ -66,6 +66,7 @@ The idea is to use a centralized auto_increment feature in a single database ser
 - However, this will introduce new challenges such as data synchronization.
 
 
+## Twitter snowflake approach
 
 
 
