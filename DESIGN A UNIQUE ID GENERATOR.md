@@ -19,6 +19,7 @@ The options we considered are:
 - Twitter snowflake approach
 
 
+## Multi-master replication
 
 
 
