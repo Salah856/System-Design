@@ -59,7 +59,11 @@ The idea is to use a centralized auto_increment feature in a single database ser
 - Numeric IDs.
 - It is easy to implement, and it works for small to medium-scale applications.
 
-
+#### Cons:
+- Single point of failure. 
+- Single ticket server means if the ticket server goes down, all systems that depend on it will face issues. 
+- To avoid a single point of failure, we can set up multiple ticket servers. 
+- However, this will introduce new challenges such as data synchronization.
 
 
 
