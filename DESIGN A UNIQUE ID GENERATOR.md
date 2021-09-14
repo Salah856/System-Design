@@ -51,8 +51,13 @@ In this design, each web server contains an ID generator, and a web server is re
 
 Ticket servers are another interesting way to generate unique IDs. Flicker developed ticket servers to generate distributed primary keys. It is worth mentioning how the system works.
 
+![image](https://user-images.githubusercontent.com/23625821/133216916-d3379b10-3fc5-4a90-b023-cc62654e2727.png)
 
+The idea is to use a centralized auto_increment feature in a single database server (Ticket Server). 
 
+#### Pros:
+- Numeric IDs.
+- It is easy to implement, and it works for small to medium-scale applications.
 
 
 
