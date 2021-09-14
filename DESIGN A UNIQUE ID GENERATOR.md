@@ -23,6 +23,13 @@ Multiple options can be used to generate unique IDs in distributed systems. The 
 This approach uses the databases’ auto_increment feature. Instead of increasing the next ID by 1, we increase it by k, where k is the number of database servers in use. Next ID to be generated is equal to the previous ID in the same server plus 2. This solves some scalability issues because IDs can scale with the number of database servers.
 
 
+However, this strategy has some major drawbacks:
+
+- Hard to scale with multiple data centers
+- IDs do not go up with time across multiple servers.
+- It does not scale well when a server is added or removed.
+
+
 
 
 
