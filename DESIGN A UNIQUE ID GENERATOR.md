@@ -67,6 +67,23 @@ The idea is to use a centralized auto_increment feature in a single database ser
 
 
 ## Twitter snowflake approach
+Approaches mentioned above give us some ideas about how different ID generation systems work. However, none of them meet our specific requirements; thus, we need another approach. Twitter’s unique ID generation system called “snowflake” is inspiring and can satisfy our requirements. Divide and conquer is our friend. Instead of generating an ID directly, we divide an ID into different sections.
+
+![image](https://user-images.githubusercontent.com/23625821/133381427-14e35715-96f1-4676-9089-4b3612bfa64c.png)
+
+
+Each section is explained below:
+
+- Sign bit: 1 bit. It will always be 0. This is reserved for future uses. It can potentially be used to distinguish between signed and unsigned numbers.
+- Timestamp: 41 bits. Milliseconds since the epoch or custom epoch. We use Twitter snowflake default epoch 1288834974657, equivalent to Nov 04, 2010, 01:42:54 UTC.
+- Datacenter ID: 5 bits, which gives us 2 ^ 5 = 32 datacenters.
+- Machine ID: 5 bits, which gives us 2 ^ 5 = 32 machines per datacenter.
+- Sequence number: 12 bits. For every ID generated on that machine/process, the sequence number is incremented by 1. The number is reset to 0 every millisecond.
+
+
+
+
+
 
 
 
