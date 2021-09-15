@@ -80,6 +80,9 @@ Each section is explained below:
 - Machine ID: 5 bits, which gives us 2 ^ 5 = 32 machines per datacenter.
 - Sequence number: 12 bits. For every ID generated on that machine/process, the sequence number is incremented by 1. The number is reset to 0 every millisecond.
 
+Datacenter IDs and machine IDs are chosen at the startup time, generally fixed once the system is up running. Any changes in datacenter IDs and machine IDs require careful review since an accidental change in those values can lead to ID conflicts. Timestamp and sequence numbers are generated when the ID generator is running.
+
+
 
 
 
