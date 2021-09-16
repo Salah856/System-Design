@@ -21,3 +21,12 @@ A 301 redirect shows that the requested URL is “permanently” moved to the lo
 A 302 redirect means that the URL is “temporarily” moved to the long URL, meaning that subsequent requests for the same URL will be sent to the URL shortening service first. Then, they are redirected to the long URL server.
 
 
+Each redirection method has its pros and cons. If the priority is to reduce the server load, using 301 redirect makes sense as only the first request of the same URL is sent to URL shortening servers. However, if analytics is important, 302 redirect is a better choice as it can track click rate and source of the click more easily. 
+
+The most intuitive way to implement URL redirecting is to use hash tables. Assuming the hash table stores <shortURL, longURL> pairs, URL redirecting can be implemented by the following:
+
+- Get longURL: longURL = hashTable.get(shortURL)
+- Once you get the longURL, perform the URL redirect.
+
+
+
