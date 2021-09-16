@@ -6,6 +6,8 @@ Here are the basic use cases:
 2. URL redirecting: given a shorter URL => redirect to the original URL. 
 3. High availability, scalability, and fault tolerance considerations. 
 
-URL redirecting
+
+## URL redirecting
+Once the server receives a tinyurl request, it changes the short URL to the long URL with 301 redirect.
 
 ![image](https://user-images.githubusercontent.com/23625821/133559109-27b61b17-0fcb-4c14-b01d-2b336ac254f3.png)
