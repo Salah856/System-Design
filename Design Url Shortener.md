@@ -20,3 +20,4 @@ A 301 redirect shows that the requested URL is “permanently” moved to the lo
 
 A 302 redirect means that the URL is “temporarily” moved to the long URL, meaning that subsequent requests for the same URL will be sent to the URL shortening service first. Then, they are redirected to the long URL server.
 
+
