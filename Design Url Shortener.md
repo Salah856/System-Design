@@ -29,4 +29,20 @@ The most intuitive way to implement URL redirecting is to use hash tables. Assum
 - Once you get the longURL, perform the URL redirect.
 
 
+## URL shortening
+
+Let us assume the short URL looks like this: www.tinyurl.com/{hashValue}. To support the URL shortening use case, we must find a hash function fx that maps a long URL to the hashValue. 
+
+![image](https://user-images.githubusercontent.com/23625821/133559649-0e159bff-7b42-4d7a-8867-0ed578d7fe35.png)
+
+
+The hash function must satisfy the following requirements:
+- Each longURL must be hashed to one hashValue.
+- Each hashValue can be mapped back to the longURL.
+
+
+
+
+
+
 
