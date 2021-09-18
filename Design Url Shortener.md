@@ -40,5 +40,12 @@ The hash function must satisfy the following requirements:
 - Each longURL must be hashed to one hashValue.
 - Each hashValue can be mapped back to the longURL.
 
+#### Hash value length
+
+The hashValue consists of characters from [0-9, a-z, A-Z], containing 10 + 26 + 26 = 62 possible characters. To figure out the length of hashValue, find the smallest n such that 62^n ≥ 365 billion. The system must support up to 365 billion URLs based on the back of the envelope estimation.
+
+
+
+
 
 
