@@ -83,6 +83,7 @@ Each section is explained below:
 Datacenter IDs and machine IDs are chosen at the startup time, generally fixed once the system is up running. Any changes in datacenter IDs and machine IDs require careful review since an accidental change in those values can lead to ID conflicts. Timestamp and sequence numbers are generated when the ID generator is running.
 
 
+
 ### References 
 
 Universally unique identifier: https://en.wikipedia.org/wiki/Universally_unique_identifier
