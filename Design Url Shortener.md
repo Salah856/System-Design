@@ -43,6 +43,3 @@ The hash function must satisfy the following requirements:
 
 
 
-
-
-
