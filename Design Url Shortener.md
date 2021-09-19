@@ -64,6 +64,9 @@ The first approach is to collect the first 7 characters of a hash value; however
 This method can eliminate collision; however, it is expensive to query the database to check if a shortURL exists for every request. A technique called bloom filters can improve performance. A bloom filter is a space-efficient probabilistic technique to test if an element is a member of a set. 
 
 
+![image](https://user-images.githubusercontent.com/23625821/133916598-8c792065-79e1-4239-8783-75bda357e674.png)
+
+
 
 
 
