@@ -83,6 +83,12 @@ The flow of URL redirecting is summarized as follows:
 6. The longURL is returned to the user.
 
 
+#### References: 
+
+A RESTful Tutorial: https://www.restapitutorial.com/index.html
+
+Bloom filter: https://en.wikipedia.org/wiki/Bloom_filter
+
 
 
 
