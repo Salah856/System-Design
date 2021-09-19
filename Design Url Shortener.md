@@ -66,6 +66,10 @@ This method can eliminate collision; however, it is expensive to query the datab
 
 ![image](https://user-images.githubusercontent.com/23625821/133916598-8c792065-79e1-4239-8783-75bda357e674.png)
 
+### URL redirecting 
+
+![image](https://user-images.githubusercontent.com/23625821/133916619-4247eba5-7705-4b4d-8390-4dbff343a876.png)
+
 
 
 
