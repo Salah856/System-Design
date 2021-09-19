@@ -72,9 +72,15 @@ This method can eliminate collision; however, it is expensive to query the datab
 
 
 
+The flow of URL redirecting is summarized as follows:
 
+1. A user clicks a short URL link: https://tinyurl.com/zn9edcu
+2. The load balancer forwards the request to web servers.
+3. If a shortURL is already in the cache, return the longURL directly.
 
-
+4. If a shortURL is not in the cache, fetch the longURL from the database. 
+5. If it is not in the database, it is likely a user entered an invalid shortURL.
+6. The longURL is returned to the user.
 
 
 
