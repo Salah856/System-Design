@@ -14,8 +14,7 @@ Gneral features of a web crawler:
 - Extensibility: The system is flexible so that minimal changes are needed to support new content types. For example, if we want to crawl image files in the future, we should not need to redesign the entire system.
 
 
-
-
+![image](https://user-images.githubusercontent.com/23625821/133965738-e1e85023-2646-49b0-9cf5-44335c4948d1.png)
 
 
 
