@@ -31,7 +31,11 @@ Most important building components and techniques in depth:
 
 BFS is commonly used by web crawlers and is implemented by a first-in-first-out (FIFO) queue. In a FIFO queue, URLs are dequeued in the order they are enqueued. However, this implementation has two problems:
 
+- Most links from the same web page are linked back to the same host. All the links in wikipedia.com are internal links, making the crawler busy processing URLs
+from the same host (wikipedia.com). When the crawler tries to download web pages in parallel, Wikipedia servers will be flooded with requests. This is considered as “impolite”.
+
 - 
+
 
 
 
