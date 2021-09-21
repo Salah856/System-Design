@@ -29,6 +29,10 @@ Most important building components and techniques in depth:
 - Detect and avoid problematic content
 
 
+BFS is commonly used by web crawlers and is implemented by a first-in-first-out (FIFO) queue. In a FIFO queue, URLs are dequeued in the order they are enqueued. However, this implementation has two problems:
+
+- 
+
 
 
 
