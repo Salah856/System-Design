@@ -36,7 +36,10 @@ from the same host (wikipedia.com). When the crawler tries to download web pages
 
 ![image](https://user-images.githubusercontent.com/23625821/134113148-8a54f111-5154-41ea-8643-b74781e74e6e.png)
 
-- 
+- Standard BFS does not take the priority of a URL into consideration. The web is large and not every page has the same level of quality and importance. Therefore, we may want to prioritize URLs according to their page ranks, web traffic, update frequency, etc.
+
+
+
 
 
 
