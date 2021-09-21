@@ -18,6 +18,17 @@ A web crawler is known as a robot or spider. It is widely used by search engines
 
 ![image](https://user-images.githubusercontent.com/23625821/133965738-e1e85023-2646-49b0-9cf5-44335c4948d1.png)
 
+Most important building components and techniques in depth:
+
+- Depth-first search (DFS) vs Breadth-first search (BFS)
+- URL frontier
+- HTML Downloader
+
+- Robustness
+- Extensibility
+- Detect and avoid problematic content
+
+
 
 
 
