@@ -45,6 +45,10 @@ from the same host (wikipedia.com). When the crawler tries to download web pages
 
 ![image](https://user-images.githubusercontent.com/23625821/134287549-ac6e4a38-a5c0-4a6c-ae92-df3f8bff60f5.png)
 
+- URLs are priotorized based on usefulness, which can be measured by PageRank, website traffic, update frequency, etc. 
+- “Prioritizer” is the component that handles URL prioritization.
+ 
+
 
 
 
