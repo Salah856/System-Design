@@ -28,7 +28,6 @@ Most important building components and techniques in depth:
 - Extensibility
 - Detect and avoid problematic content
 
-
 BFS is commonly used by web crawlers and is implemented by a first-in-first-out (FIFO) queue. In a FIFO queue, URLs are dequeued in the order they are enqueued. However, this implementation has two problems:
 
 - Most links from the same web page are linked back to the same host. All the links in wikipedia.com are internal links, making the crawler busy processing URLs
@@ -37,6 +36,12 @@ from the same host (wikipedia.com). When the crawler tries to download web pages
 ![image](https://user-images.githubusercontent.com/23625821/134113148-8a54f111-5154-41ea-8643-b74781e74e6e.png)
 
 - Standard BFS does not take the priority of a URL into consideration. The web is large and not every page has the same level of quality and importance. Therefore, we may want to prioritize URLs according to their page ranks, web traffic, update frequency, etc.
+
+- The general idea of enforcing politeness is to download one page at a time from the same host. 
+- A delay can be added between two download tasks. 
+
+- The politeness constraint is implemented by maintain a mapping from website hostnames to download (worker) threads.
+- Each downloader thread has a separate FIFO queue and only downloads URLs obtained from that queue.
 
 
 
