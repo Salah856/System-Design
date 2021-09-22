@@ -48,7 +48,14 @@ from the same host (wikipedia.com). When the crawler tries to download web pages
 - URLs are priotorized based on usefulness, which can be measured by PageRank, website traffic, update frequency, etc. 
 - “Prioritizer” is the component that handles URL prioritization.
  
+![image](https://user-images.githubusercontent.com/23625821/134287758-b52ca888-be1c-4bde-9330-baa3107c613d.png)
 
+
+- Prioritizer: It takes URLs as input and computes the priorities.
+
+- Queue f1 to fn: Each queue has an assigned priority. Queues with high priority are selected with higher probability.
+
+- Queue selector: Randomly choose a queue with a bias towards queues with higher priority.
 
 
 
