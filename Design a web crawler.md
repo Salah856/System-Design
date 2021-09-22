@@ -43,7 +43,7 @@ from the same host (wikipedia.com). When the crawler tries to download web pages
 - The politeness constraint is implemented by maintain a mapping from website hostnames to download (worker) threads.
 - Each downloader thread has a separate FIFO queue and only downloads URLs obtained from that queue.
 
-
+![image](https://user-images.githubusercontent.com/23625821/134287549-ac6e4a38-a5c0-4a6c-ae92-df3f8bff60f5.png)
 
 
 
