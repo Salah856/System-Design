@@ -5,6 +5,7 @@ A web crawler is known as a robot or spider. It is widely used by search engines
 ![image](https://user-images.githubusercontent.com/23625821/133965293-0d59d9e2-399d-4da2-aff3-67096ffe6136.png)
 
 
+
 ## Gneral features of a web crawler: 
 
 - Scalability: The web is very large. There are billions of web pages out there. Web crawling should be extremely efficient using parallelization.
