@@ -13,6 +13,30 @@ To send notifications, we need to gather mobile device tokens, phone numbers, or
 
 ![image](https://user-images.githubusercontent.com/23625821/134760046-e1fd8f36-869c-4284-bc95-6c5a1aa79c84.png)
 
+
+
 #### Notification sending/receiving flow
 
+![image](https://user-images.githubusercontent.com/23625821/134760064-19a66727-2ac8-4be1-9ebf-a1ceb6e1ebc9.png)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### References
+
+System design interviews 
