@@ -20,6 +20,7 @@ To send notifications, we need to gather mobile device tokens, phone numbers, or
 ![image](https://user-images.githubusercontent.com/23625821/134760064-19a66727-2ac8-4be1-9ebf-a1ceb6e1ebc9.png)
 
 
+Service 1 to N: A service can be a micro-service, a cron job, or a distributed system that triggers notification sending events. For example, a billing service sends emails to remind customers of their due payment or a shopping website tells customers that their packages will be delivered tomorrow via SMS messages.
 
 
 
