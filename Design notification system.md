@@ -28,6 +28,9 @@ Notification system: The notification system is the centerpiece of sending/recei
 Third-party services: Third party services are responsible for delivering notifications to users. While integrating with third-party services, we need to pay extra attention to extensibility. Good extensibility means a flexible system that can easily plugging or unplugging of a third-party service. Another important consideration is that a third-party service might be unavailable in new markets or in the future. For instance, FCM is unavailable in China. Thus, alternative third-party services such as Jpush, PushY, etc are used there.
 
 
+![image](https://user-images.githubusercontent.com/23625821/134855449-8c0881b1-e2b2-4b92-aa9b-b167bc2ec8b6.png)
+
+
 
 
 
