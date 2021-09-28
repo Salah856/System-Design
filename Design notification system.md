@@ -7,7 +7,6 @@
 - 10 million mobile push notifications, 1 million SMS messages, and 5 million emails.
 
 
-
 ### Contact info gathering flow
 
 To send notifications, we need to gather mobile device tokens, phone numbers, or email addresses. When a user installs our app or signs up for the first time, API servers collect user contact info and store it in the database.
