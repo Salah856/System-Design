@@ -30,6 +30,11 @@ Third-party services: Third party services are responsible for delivering notifi
 
 ![image](https://user-images.githubusercontent.com/23625821/134855449-8c0881b1-e2b2-4b92-aa9b-b167bc2ec8b6.png)
 
+## Events tracking
+
+Notification metrics, such as open rate, click rate, and engagement are important in understanding customer behaviors. Analytics service implements events tracking. Integration between the notification system and the analytics service is usually required.
+
+
 
 
 
