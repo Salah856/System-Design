@@ -34,22 +34,9 @@ Third-party services: Third party services are responsible for delivering notifi
 
 Notification metrics, such as open rate, click rate, and engagement are important in understanding customer behaviors. Analytics service implements events tracking. Integration between the notification system and the analytics service is usually required.
 
+![image](https://user-images.githubusercontent.com/23625821/135033689-13758b09-ff5a-4415-be05-736006625e9a.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/23625821/135033754-ec392911-28c3-4746-9a5e-076160b928c6.png)
 
 
 
@@ -57,3 +44,12 @@ Notification metrics, such as open rate, click rate, and engagement are importan
 ### References
 
 System design interviews 
+
+You Cannot Have Exactly-Once Delivery: https://bravenewgeek.com/you-cannot-have-exactly-once-delivery/
+
+Security in Push Notifications: https://cloud.ibm.com/docs/services/mobilepush?topic=mobile-pushnotification-security-in-push-notifications
+
+RadditMQ: https://bit.ly/2sotIa6
+
+
+
