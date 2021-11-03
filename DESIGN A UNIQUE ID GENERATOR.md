@@ -84,6 +84,7 @@ Datacenter IDs and machine IDs are chosen at the startup time, generally fixed o
 
 
 
+
 ### References 
 
 Universally unique identifier: https://en.wikipedia.org/wiki/Universally_unique_identifier
@@ -93,8 +94,6 @@ Ticket Servers: Distributed Unique Primary Keys on the Cheap: https://code.flick
 Announcing Snowflake: https://blog.twitter.com/engineering/en_us/a/2010/announcing-snowflake.html
 
 Network time protocol: https://en.wikipedia.org/wiki/Network_Time_Protocol
-
-
 
 
 
