@@ -57,4 +57,3 @@ from the same host (wikipedia.com). When the crawler tries to download web pages
 ![image](https://user-images.githubusercontent.com/23625821/134287891-aee3cc4e-c067-413c-aa61-dd663509dfa8.png)
 
 
-
